@@ -1,0 +1,17 @@
+import pandas as pd
+ds = pd.read_csv('data/odi.csv')
+
+ds
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+india = ds[ds.bat_team == 'India']
+
+sns.barplot(x=india.bowl_team,y=india.total)
+plt.title('india vs other countries')
+plt.rc('figure', figsize=(45, 15))
+
+plt.plot(ds.mid,ds.total)
+
+plt.hist(ds.total)

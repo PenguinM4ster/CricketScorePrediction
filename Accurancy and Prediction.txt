@@ -1,0 +1,42 @@
+linear Regression:
+
+y_pred = lin.predict(X_test)
+score = lin.score(X_test,y_test)*100
+print("R square value:" , score)
+print("Custom accuracy:" , custom_accuracy(y_test,y_pred,20))
+y_pred = lin.predict(X_test)
+score = lin.score(X_test,y_test)*100
+print("R square value:" , score)
+print("Custom accuracy:" , custom_accuracy(y_test,y_pred,20))
+
+
+R square value: 52.737657811129445
+Custom accuracy: 43.354801937874036
+
+
+import numpy as np
+new_prediction = lin.predict(sc.transform(np.array([[100,0,13,50,50]])))
+print("Prediction score:" , new_prediction)
+
+
+Prediction score: [322.42983935]
+
+
+Random Forest Regression:
+
+y_pred = lin.predict(X_test)
+score = lin.score(X_test,y_test)*100
+print("R-squared value:" , score)
+print("Custom accuracy:" , custom_accuracy(y_test,y_pred,20))
+
+
+R-squared value: 79.56258102391526
+Custom accuracy: 77.17526360786549
+
+
+import numpy as np
+new_prediction = lin.predict(sc.transform(np.array([[100,0,13,50,50]])))
+print("Prediction score:" , new_prediction)
+
+
+Prediction score: [317.73]
